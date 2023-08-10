@@ -28,7 +28,7 @@ export default function NavBar() {
 
     return (
         <nav className={`p-10 absolute top-0 left-0 w-full z-50 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-            <div className="container mx-auto flex justify-between items-center space-x-10">
+            <div className="font-poppins container mx-auto flex justify-between items-center space-x-10">
                 <Link to='/'>
                 <span className="text-black text-2xl font-bold">RootsRise</span>
                 </Link>

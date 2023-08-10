@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AboutHero() {
   return (
-    <div className="relative h-[60vh] bg-center bg-cover z-10" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1586268290052-b424b6c9994e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDIwMXx8ZmFybXxlbnwxfHx8fDE2OTE1MzUzNjh8MA&ixlib=rb-4.0.3&q=80&w=1000)' }}>
+    <div className="font-poppins relative h-[60vh] bg-center bg-cover z-10" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1586268290052-b424b6c9994e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDIwMXx8ZmFybXxlbnwxfHx8fDE2OTE1MzUzNjh8MA&ixlib=rb-4.0.3&q=80&w=1000)' }}>
       {/* Large centered container with space around */}
       <div className="absolute inset-10 md:inset-20 lg:inset-32 flex items-end mb-5 md:mb-12 lg:mb-8 xl:mb-4">
         {/* Container for content that will adjust its left-padding */}

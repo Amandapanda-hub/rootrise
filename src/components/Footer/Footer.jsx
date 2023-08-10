@@ -23,7 +23,7 @@ const socialLinks = [
 
 
 const RightContainer = () => (
-  <div className="grid grid-cols-2 gap-2 lg:gap-10 w-full md:w-auto">
+  <div className="font-poppins grid grid-cols-2 gap-2 lg:gap-10 w-full md:w-auto">
     <div className="text-left space-y-3">
       <h3 className="font-bold text-xl mb-8">Our Work</h3>
       {ourWorkLinks.map(link => (
