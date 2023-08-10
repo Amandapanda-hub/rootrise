@@ -26,6 +26,10 @@ export default function NavBar() {
         };
     }, []);
 
+    const handleLinkClick = () => {
+        setIsOpen(false);
+    };
+    
     return (
         <nav className={`p-10 absolute top-0 left-0 w-full z-50 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
             <div className="font-poppins container mx-auto flex justify-between items-center space-x-10">
@@ -57,21 +61,21 @@ export default function NavBar() {
                 </button>
             </div>
 
-                {isOpen && (
-                    <div className="absolute top-0 left-0 h-screen bg-[#3F2305] z-60 p-10 text-lg transform transition-transform duration-300 ease-in-out flex flex-col justify-center" style={{ 
-                    width: '75%', 
-                    transform: isOpen ? 'translateX(0)' : 'translateX(-100%)' 
-                    }}>
-                    <div className="space-y-10 pb-20">
-                    <NavLink to="/about" className={({ isActive }) => isActive ? 'block text-center text-white hover:text-black hover:text-opacity-70' : 'block text-center text-white hover:text-black hover:text-opacity-70'}>
-                        About
-                    </NavLink>
-                    <NavLink to="/missions" className={({ isActive }) => isActive ? 'block text-center text-white underline hover:text-black hover:text-opacity-70' : 'block text-center text-white hover:text-black hover:text-opacity-70'}>
-                        Missions
-                    </NavLink>
-                    <NavLink to="/contact" className={({ isActive }) => isActive ? 'block text-center text-white underline hover:text-black hover:text-opacity-70' : 'block text-center text-white hover:text-black hover:text-opacity-70'}>
-                        Contact Us
-                    </NavLink>
+                 {isOpen && (
+                <div className="absolute top-0 left-0 h-screen bg-[#3F2305] z-60 p-10 text-lg transform transition-transform duration-300 ease-in-out flex flex-col justify-center" style={{ 
+                width: '75%', 
+                transform: isOpen ? 'translateX(0)' : 'translateX(-100%)' 
+                }}>
+                <div className="space-y-10 pb-20">
+                <NavLink onClick={handleLinkClick} to="/about" className={({ isActive }) => isActive ? 'block text-center text-white hover:text-black hover:text-opacity-70' : 'block text-center text-white hover:text-black hover:text-opacity-70'}>
+                    About
+                </NavLink>
+                <NavLink onClick={handleLinkClick} to="/missions" className={({ isActive }) => isActive ? 'block text-center text-white underline hover:text-black hover:text-opacity-70' : 'block text-center text-white hover:text-black hover:text-opacity-70'}>
+                    Missions
+                </NavLink>
+                <NavLink onClick={handleLinkClick} to="/contact" className={({ isActive }) => isActive ? 'block text-center text-white underline hover:text-black hover:text-opacity-70' : 'block text-center text-white hover:text-black hover:text-opacity-70'}>
+                    Contact Us
+                </NavLink>
 
                     </div>
                     <div className="flex justify-center space-x-4 my-4">
